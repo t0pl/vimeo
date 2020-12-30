@@ -3,16 +3,12 @@
     "manifest_version": 2,
     "description": "Shorthand to get details about Vimeo video on some webpage",
     "name": "Vimeo details",
-    "version": "1.0",
-    "background": {
-        "scripts": [
-            "./src/background.js"
-        ],
-        "persistent": false
-    },
+    "version": "1.1",
     "permissions": [
         "activeTab",
         "tabs",
+        "webRequest",
+        "webRequestBlocking",
         "<all_urls>"
     ],
     "browser_action": {
