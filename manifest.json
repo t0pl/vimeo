@@ -1,7 +1,7 @@
 {
     "author": "t0pl",
     "manifest_version": 2,
-    "description": "...",
+    "description": "Shorthand to get details about Vimeo video on some webpage",
     "name": "Vimeo details",
     "version": "1.0",
     "background": {
@@ -13,8 +13,6 @@
     "permissions": [
         "activeTab",
         "tabs",
-        "webRequestBlocking",
-        "webRequest",
         "<all_urls>"
     ],
     "browser_action": {

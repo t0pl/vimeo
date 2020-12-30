@@ -10,12 +10,13 @@ chrome.runtime.onMessage.addListener(
                 return
             }
             let results = {}
-            chrome.runtime.sendMessage({ source: source_found, url:window.url}, res => {
-                console.log(res.output)
+            chrome.runtime.sendMessage({ source: source_found}, res => {
+                
                 results = res.output
-                results.referer = window.url
-                sendResponse({ stuff: results });
+                console.log(results)
+                sendResponse({ stuff: results })
             })
+            return true
         }
     }
 )
