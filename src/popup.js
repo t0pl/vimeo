@@ -9,7 +9,6 @@ When popup gets clicked
 popup gets dressed up
 
 TODO
-    Remove background script, as popup is old enough to fetch data on its own
     Handle errors
 */
 try { var browser = chrome } catch { }
@@ -87,7 +86,7 @@ const get_dressed = (output) => {
 
         //and leads to matching url
         btn_open_video.onclick = () => {
-            chrome.tabs.create({ active: true, url: output.all_videos[i].url }, tab => {
+            browser.tabs.create({ active: true, url: output.all_videos[i].url }, tab => {
 
             })
         }
@@ -104,7 +103,7 @@ const get_dressed = (output) => {
     let owner_url = document.getElementById("owner_url")
     owner_url.textContent = output.owner.url
     owner_url.onclick = () => {
-        chrome.tabs.create({ active: true, url: output.owner.url }, tab => {
+        browser.tabs.create({ active: true, url: output.owner.url }, tab => {
 
         })
     }
